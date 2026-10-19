@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fixbot"
+version = "1.0.0"
+description = "AI-powered terminal system support bot"
+requires-python = ">=3.9"
+dependencies = [
+    "google-generativeai>=0.5.0",
+    "rich>=13.7.0",
+    "prompt_toolkit>=3.0.43",
+    "psutil>=5.9.8",
+    "wmi>=1.5.1",
+    "pywin32>=306",
+    "winshell>=0.6",
+]
+
+[project.scripts]
+fixbot = "sysdoc.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sysdoc*"]
